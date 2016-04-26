@@ -2,19 +2,32 @@
 <html>
 <head>
   <title>Week 7, Day 2 Practice</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+  integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+  integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+  integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
   <link rel="stylesheet" type="text/css" href="./styles.css">
   <script src="./script.js"></script>
 </head>
 <body>
 
-  <h1 class="header">Week 7, Day 2 Practice</h1>
+  <h1 id="header" class="header" onClick="eonToWeek();">Week 7, Day 2 Practice</h1>
 
   <ol>
-    <li class="list-item" onClick="makePurple(this);">Click me to turn me purple. Click me again to turn me black.</li>
-    <li class="list-item" onClick="makePurple(this);">Click me to turn me purple. Click me again to turn me black.</li>
-    <li class="list-item" onClick="makePurple(this);">Click me to turn me purple. Click me again to turn me black.</li>
-    <li class="list-item" onClick="makePurple(this);">Click me to turn me purple. Click me again to turn me black.</li>
-    <li class="list-item" onClick="makePurple(this);">Click me to turn me purple. Click me again to turn me black.</li>
+    <li class="list-item clickable" onClick="makePurple(this);">Click me to turn me purple. Click me again to turn me black.</li>
+    <li class="list-item clickable" onClick="makePurple(this);">Click me to turn me purple. Click me again to turn me black.</li>
+    <li class="list-item clickable" onClick="makePurple(this);">Click me to turn me purple. Click me again to turn me black.</li>
+    <li class="list-item clickable" onClick="makePurple(this);">Click me to turn me purple. Click me again to turn me black.</li>
+    <li class="list-item clickable" onClick="makePurple(this);">Click me to turn me purple. Click me again to turn me black.</li>
   </ol>
 
   <p id="firstP"> When you click <a href="#" onClick="makeOrange();">This Link</a>, list items with a class of
@@ -31,24 +44,24 @@
   When you click it yet another time, it should go back to having a white
   background.</p>
 
-  <p>When you click <a href="#">this link</a>, the word "Week" in the title
+  <p id="forthP">When you click <a href="#" onClick="weekToEon();">this link</a>, the word "Week" in the title
   (defined in the head) and in the h1 should both become "Eon". When you click
   the h1, both the h1 and the title should go back to saying "Week" (instead of
   "Eon").</p>
 
-  <p>When you click on this paragraph, the above paragraph should go from being
+  <p class="clickable" onClick="textJustify();">When you click on this paragraph, the above paragraph should go from being
   left-justified to right-justified.</p>
 
-  <p>Clicking <a href="#">this link</a> changes the link's text to say "THIS
+  <p>Clicking <a href="#" id="link-loud" onClick="imageToggle(this);">this link</a> changes the link's text to say "THIS
   LINK!!" and makes a picture appear below this paragraph. Clicking the picture
   returns the link text to what it was before and makes the picture
   disappear.</p>
 
   <!-- the picture below should start as invisible and only appear when
   something happens in the above paragraph -->
-  <img src="http://placekitten.com/g/400/300">
+  <img id="cute-cat" class="clickable hidden" onClick="hideImage(this);" src="http://placekitten.com/g/400/300">
 
-  <p>Clicking this paragraph prompts the user for a word or phrase, then changes
+  <p id="seventhP" class="clickable" onClick="textPrompt(this);">Clicking this paragraph prompts the user for a word or phrase, then changes
   the text of this paragraph to be that word or phrase</p>
 
 </body>

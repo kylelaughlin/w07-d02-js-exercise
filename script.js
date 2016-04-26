@@ -46,6 +46,54 @@ function hideFirstP() {
 
 function updateBackground() {
   var element = document.getElementById("secondP");
-  var colors = ["blue", "orange", "white"];
-  
+  if(element.classList.contains("blue-background")){
+    removeClass(element, "blue-background");
+    addClass(element, "orange-background");
+  } else if(element.classList.contains("orange-background")){
+    removeClass(element, "orange-background");
+  } else {
+    addClass(element, "blue-background");
+  };
+}
+
+function weekToEon() {
+  var elements = document.getElementsByTagName("title");
+  elements[0].innerHTML = "Eon 7, Day 2 Practice";
+
+  var element = document.getElementById("header");
+  element.innerHTML = "Eon 7, Day 2 Practice";
+}
+
+function eonToWeek() {
+  var elements = document.getElementsByTagName("title");
+  elements[0].innerHTML = "Week 7, Day 2 Practice";
+
+  var element = document.getElementById("header");
+  element.innerHTML = "Week 7, Day 2 Practice";
+}
+
+function textJustify() {
+  var element = document.getElementById("forthP");
+  if(element.classList.contains("right-justify")){
+    removeClass(element, "right-justify");
+  } else {
+    addClass(element, "right-justify");
+  };
+}
+
+function imageToggle(element) {
+  element.innerHTML = "THIS LINK!!";
+  image = document.getElementById("cute-cat");
+  removeClass(image, "hidden");
+}
+
+function hideImage(element) {
+  addClass(element, "hidden");
+  var item = document.getElementById("link-loud");
+  item.innerHTML = "this link";
+}
+
+function textPrompt(element) {
+  var text = prompt("Please provide a word or phrase.");
+  element.innerHTML = text;
 }

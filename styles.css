@@ -10,3 +10,27 @@
 .hide-element {
   display: none;
 }
+
+.blue-background {
+  background-color: #0095DD;
+}
+
+.orange-background {
+  background-color: #F07C01;
+}
+
+.right-justify {
+  text-align: right;
+}
+
+.hidden {
+  display: none;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+body{
+  padding: 30px;
+}
